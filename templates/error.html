@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block title %}{{ code }} | FitZone{% endblock %}{% block content %}<section class="auth-wrap"><div class="auth-card text-center"><span class="eyebrow">{{ code }} ERROR</span><h1>Oops, let's get you moving.</h1><p class="muted">{{ message }}</p><a class="btn btn-lime" href="{{ url_for('home') }}">Back home</a></div></section>{% endblock %}

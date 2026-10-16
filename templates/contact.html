@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% block title %}Contact FitZone{% endblock %}{% block content %}<section class="page-hero">
+    <div class="container"><span class="eyebrow">WE'RE HERE TO HELP</span>
+        <h1>Let's talk fitness.</h1>
+        <p>Questions about a plan, class, or location? Send us a note.</p>
+    </div>
+</section>
+<section class="section container">
+    <div class="row g-5">
+        <div class="col-lg-5">
+            <h2>Say hello.</h2>
+            <p class="muted">Our team can help you find the right location, understand membership options, and get
+                started.</p>
+            <div class="contact-detail"><b>Email</b><span>hello@fitzone.example</span></div>
+            <div class="contact-detail"><b>Hours</b><span>Monday–Saturday, 6 AM–10 PM</span></div>
+            <div class="contact-detail"><b>Locations</b><span>Betul</span></div>
+        </div>
+        <div class="col-lg-7">
+            <form class="form-panel" method="post"><input type="hidden" name="csrf_token"
+                    value="{{ csrf_token() }}"><label class="form-label">Your name</label><input
+                    class="form-control mb-3" name="name" required minlength="2"><label
+                    class="form-label">Email</label><input class="form-control mb-3" name="email" type="email"
+                    required><label class="form-label">Subject</label><input class="form-control mb-3" name="subject"
+                    required><label class="form-label">Message</label><textarea class="form-control mb-3" name="message"
+                    rows="5" required minlength="10"></textarea><button class="btn btn-lime">Send message ↗</button>
+            </form>
+        </div>
+    </div>
+</section>{% endblock %}
